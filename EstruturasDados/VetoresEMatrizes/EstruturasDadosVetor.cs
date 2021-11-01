@@ -161,6 +161,40 @@ namespace CursoEstruturasDados_OOP
                 vet[Dimensao] = val;
             }
         }
+
+        public void Inserir(ref int[] vet, string val)
+        {
+            Dimensao = CalcDimensao(vet);
+            Cheia = DefCheia(vet);
+            if (!Cheia)
+            {
+                try
+                {
+                    vet[Dimensao] = Convert.ToInt32(val);
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Atenção Erro: " + e.Message);
+                }
+            }
+        }
+
+        public void Inserir(ref string[] vet, int val)
+        {
+            Dimensao = CalcDimensao(vet);
+            Cheia = DefCheia(vet);
+            if (!Cheia)
+            {
+                try
+                {
+                    vet[Dimensao] = val.ToString();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Atenção Erro: " + e.Message);
+                }
+            }
+        }
         #endregion
 
         #region encherVetorComValoresAleatorios

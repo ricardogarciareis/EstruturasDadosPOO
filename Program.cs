@@ -10,7 +10,7 @@ namespace CursoEstruturasDados_OOP
 
             #region listaVetor
             var apresentacaoListaVetor = new UsoListaVetor();
-            //apresentacaoListaVetor.Apresentacao();
+            apresentacaoListaVetor.Apresentacao();
             #endregion
 
             #region pilhaVetor
@@ -35,7 +35,7 @@ namespace CursoEstruturasDados_OOP
 
             #region filaMatriz
             var apresentacaoFilaMatriz = new UsoFilaMatriz();
-            apresentacaoFilaMatriz.Apresentacao();
+            //apresentacaoFilaMatriz.Apresentacao();
             #endregion
 
         }

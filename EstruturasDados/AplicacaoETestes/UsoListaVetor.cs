@@ -18,7 +18,7 @@ namespace CursoEstruturasDados_OOP
 
             lista.EliminarDoElemento(ref vetor1, 1);
 
-            lista.Inserir(ref vetor1, 1);
+            lista.Inserir(ref vetor1, "1");
 
             Console.WriteLine("------------------------------------------------------------------");
             lista.Apresentar(vetor1);
@@ -27,6 +27,15 @@ namespace CursoEstruturasDados_OOP
             Console.WriteLine("Quantidade de valores 1 na Lista: " + lista.ContaValores(vetor1, 1));
             Console.WriteLine("Dimensão da Lista: " + lista.Dimensao);
             Console.WriteLine("Limite Superior do Vetor: " + lista.LimiteSuperior);
+
+            string[] vetor2 = new string[10];
+            ListaVetor lista2 = new ListaVetor(ref vetor2);
+
+            lista2.Inserir(ref vetor2, 1310);
+            Console.WriteLine("-------------------------------------");
+            lista.Apresentar(vetor2);
+
+
         }
     }
 }
