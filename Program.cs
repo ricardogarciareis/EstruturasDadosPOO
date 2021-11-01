@@ -35,7 +35,7 @@ namespace CursoEstruturasDados_OOP
 
             #region filaMatriz
             var apresentacaoFilaMatriz = new UsoFilaMatriz();
-            //apresentacaoFilaMatriz.Apresentacao();
+            apresentacaoFilaMatriz.Apresentacao();
             #endregion
 
         }
