@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace CursoEstruturasDados_OOP
 {
@@ -10,7 +11,7 @@ namespace CursoEstruturasDados_OOP
 
             #region listaVetor
             var apresentacaoListaVetor = new UsoListaVetor();
-            apresentacaoListaVetor.Apresentacao();
+            //apresentacaoListaVetor.Apresentacao();
             #endregion
 
             #region pilhaVetor
@@ -38,6 +39,22 @@ namespace CursoEstruturasDados_OOP
             //apresentacaoFilaMatriz.Apresentacao();
             #endregion
 
+
+            #region app.config
+            var preencherListaStrings = Convert.ToBoolean(ConfigurationManager.AppSettings["preencherListaStrings"]);
+            
+            if (preencherListaStrings)
+            {
+                string[] vetorStrings = new string[5];
+                ListaVetor lista = new ListaVetor(ref vetorStrings);
+
+                for(int i = 0; i < vetorStrings.Length; i++)
+                {
+                    lista.Inserir(ref vetorStrings, ConfigurationManager.AppSettings[$"valor{i}"]);
+                }
+                lista.Apresentar(vetorStrings);
+            }
+            #endregion
         }
     }
 }
