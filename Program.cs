@@ -40,6 +40,11 @@ namespace CursoEstruturasDados_OOP
             #endregion
 
 
+
+
+
+
+
             #region app.config
             var preencherListaStrings = Convert.ToBoolean(ConfigurationManager.AppSettings["preencherListaStrings"]);
             
